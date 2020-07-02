@@ -1797,6 +1797,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "OnlineShopping.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/OnlineShopping.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/OnlineShopping.Common.dll": {}
+        }
       }
     }
   },
@@ -5988,11 +5998,17 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "OnlineShopping.Common/1.0.0": {
+      "type": "project",
+      "path": "../OnlineShopping.Common/OnlineShopping.Common.csproj",
+      "msbuildProject": "../OnlineShopping.Common/OnlineShopping.Common.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.3"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.3",
+      "OnlineShopping.Common >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -6024,7 +6040,11 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "F:\\project\\OnlineShopping_Anguler\\OnlineShopping_frontend\\OnlineShoppingBackEnd\\OnlineShopping.Common\\OnlineShopping.Common.csproj": {
+              "projectPath": "F:\\project\\OnlineShopping_Anguler\\OnlineShopping_frontend\\OnlineShoppingBackEnd\\OnlineShopping.Common\\OnlineShopping.Common.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

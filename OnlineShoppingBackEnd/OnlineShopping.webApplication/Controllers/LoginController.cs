@@ -4,10 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using OnlineShopping.Common.Models;
 
 namespace OnlineShopping.webApplication.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
     public class LoginController : ControllerBase
     {
@@ -17,6 +17,11 @@ namespace OnlineShopping.webApplication.Controllers
 
         }
 
-       
+        [Route("api/Login")]
+        [Route("api/Login/UserEnroll")]
+       public string UserEnroll()
+        {
+             return "this is user enroll";
+        }
     }
 }

@@ -92,3 +92,5 @@ F:\project\OnlineShopping_Anguler\OnlineShopping_frontend\OnlineShoppingBackEnd\
 F:\project\OnlineShopping_Anguler\OnlineShopping_frontend\OnlineShoppingBackEnd\OnlineShopping.webApplication\obj\Debug\netcoreapp3.1\OnlineShopping.webApplication.dll
 F:\project\OnlineShopping_Anguler\OnlineShopping_frontend\OnlineShoppingBackEnd\OnlineShopping.webApplication\obj\Debug\netcoreapp3.1\OnlineShopping.webApplication.pdb
 F:\project\OnlineShopping_Anguler\OnlineShopping_frontend\OnlineShoppingBackEnd\OnlineShopping.webApplication\obj\Debug\netcoreapp3.1\OnlineShopping.webApplication.genruntimeconfig.cache
+F:\project\OnlineShopping_Anguler\OnlineShopping_frontend\OnlineShoppingBackEnd\OnlineShopping.webApplication\bin\Debug\netcoreapp3.1\OnlineShopping.Common.dll
+F:\project\OnlineShopping_Anguler\OnlineShopping_frontend\OnlineShoppingBackEnd\OnlineShopping.webApplication\bin\Debug\netcoreapp3.1\OnlineShopping.Common.pdb

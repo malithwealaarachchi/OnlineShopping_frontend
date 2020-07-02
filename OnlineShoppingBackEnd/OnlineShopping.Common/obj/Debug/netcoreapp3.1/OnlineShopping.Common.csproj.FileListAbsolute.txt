@@ -1,0 +1,9 @@
+F:\project\OnlineShopping_Anguler\OnlineShopping_frontend\OnlineShoppingBackEnd\OnlineShopping.Common\bin\Debug\netcoreapp3.1\OnlineShopping.Common.deps.json
+F:\project\OnlineShopping_Anguler\OnlineShopping_frontend\OnlineShoppingBackEnd\OnlineShopping.Common\bin\Debug\netcoreapp3.1\OnlineShopping.Common.dll
+F:\project\OnlineShopping_Anguler\OnlineShopping_frontend\OnlineShoppingBackEnd\OnlineShopping.Common\bin\Debug\netcoreapp3.1\OnlineShopping.Common.pdb
+F:\project\OnlineShopping_Anguler\OnlineShopping_frontend\OnlineShoppingBackEnd\OnlineShopping.Common\obj\Debug\netcoreapp3.1\OnlineShopping.Common.csprojAssemblyReference.cache
+F:\project\OnlineShopping_Anguler\OnlineShopping_frontend\OnlineShoppingBackEnd\OnlineShopping.Common\obj\Debug\netcoreapp3.1\OnlineShopping.Common.csproj.CoreCompileInputs.cache
+F:\project\OnlineShopping_Anguler\OnlineShopping_frontend\OnlineShoppingBackEnd\OnlineShopping.Common\obj\Debug\netcoreapp3.1\OnlineShopping.Common.AssemblyInfoInputs.cache
+F:\project\OnlineShopping_Anguler\OnlineShopping_frontend\OnlineShoppingBackEnd\OnlineShopping.Common\obj\Debug\netcoreapp3.1\OnlineShopping.Common.AssemblyInfo.cs
+F:\project\OnlineShopping_Anguler\OnlineShopping_frontend\OnlineShoppingBackEnd\OnlineShopping.Common\obj\Debug\netcoreapp3.1\OnlineShopping.Common.dll
+F:\project\OnlineShopping_Anguler\OnlineShopping_frontend\OnlineShoppingBackEnd\OnlineShopping.Common\obj\Debug\netcoreapp3.1\OnlineShopping.Common.pdb

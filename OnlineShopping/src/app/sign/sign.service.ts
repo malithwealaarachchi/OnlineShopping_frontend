@@ -8,19 +8,17 @@ import { Observable } from 'rxjs';
 })
 export class SignService {
 
-  private baseUrl = 'https://localhost:44313/';
-  private readonly apiPath : string = 'api/LoginController';
+  private baseUrl = "https://localhost:44302/";
+  private readonly apiPath : string = "api/Login";
 
   constructor( private _http : HttpClient) { }
 
   enroll(user: User ) : Observable<User> {
-    return this._http.post<User>('${this.baseUrl}${this.apiPath}', user,{
+    return this._http.post<User>('https://localhost:44302/api/login', user,{
      headers: new HttpHeaders({
        'Content-Type' : 'application/json'
      })
     })
-  
   }
 }
   
-
