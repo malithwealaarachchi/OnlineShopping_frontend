@@ -21,5 +21,10 @@ namespace OnlineShopping.Business.AccountBusiness
         {
             return await _userRepository.loginUser(userModel).ConfigureAwait(false);
         }
+
+        public async Task<User> UserRegistration(User userModel)
+        {
+            return await _userRepository.UserRegistration(userModel).ConfigureAwait(false);
+        }
     }
 }

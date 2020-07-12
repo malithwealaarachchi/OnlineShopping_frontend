@@ -35,5 +35,18 @@ namespace OnlineShopping.Data
             else
                 return "login unsucceeded";
         }
+
+        public async Task<User> UserRegistration(User UserModel)
+        {
+            var user = new IdentityUser { UserName = UserModel.UserName, Email = UserModel.Email , PhoneNumber = UserModel.PhoneNumber };
+            var result =  await _userManager.CreateAsync(user, UserModel.Password);
+
+            if (result.Succeeded)
+            {
+               await _signInManager.SignInAsync(user, isPersistent: false);
+                return (UserModel);
+            }
+            return null;
+        }
     }
 }

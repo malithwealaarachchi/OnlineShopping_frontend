@@ -17,35 +17,50 @@ namespace OnlineShopping.webApplication.Controllers
         {
             _loginBusiness = loginBusiness;
         }
-        //[Route("")]
-        //[Route("api/Login")]
-        //[Route("api/Login/UserEnroll")]
-        //[HttpPost]
-        //public async Task<IActionResult> UserEnroll(User userModel)
-        //{
-        //    if (string.IsNullOrEmpty(userModel.Email) || string.IsNullOrEmpty(userModel.Password))
-        //    {
-        //        return BadRequest();
-        //    }
-        //    else
-        //    {
-        //        try
-        //        {
-        //            await _loginBusiness.LoginUser(userModel).ConfigureAwait(false);
-        //            return Ok();
-        //        }
-        //        catch (Exception)
-        //        {
-        //            return StatusCode(500, "Internal server error");
-        //        }
-        //    }
+        [Route("")]
+        [Route("api/Login")]
+        [Route("api/Login/UserEnroll")]
+        [HttpPost]
+        public async Task<IActionResult> UserEnroll(User userModel)
+        {
+            if (string.IsNullOrEmpty(userModel.Email) || string.IsNullOrEmpty(userModel.Password))
+            {
+                return BadRequest();
+            }
+            else
+            {
+                try
+                {
+                    await _loginBusiness.LoginUser(userModel).ConfigureAwait(false);
+                    return Ok();
+                }
+                catch (Exception)
+                {
+                    return StatusCode(500, "Internal server error");
+                }
+            }
 
-        //}
+        }
         [Route("api/Login/UserRegister")]
         [HttpPost]
-        public string UserRegister(User userModel)
+        public async Task<IActionResult> UserRegister(User userModel)
         {
-            return "This is test return text";
+            if (string.IsNullOrEmpty(userModel.Email) || string.IsNullOrEmpty(userModel.Password))
+            {
+                return BadRequest();
+            }
+            else
+            {
+                try
+                {
+                    await _loginBusiness.UserRegistration(userModel);
+                    return Ok();
+                }
+                catch (Exception)
+                {
+                    return StatusCode(500, "Internal server error");
+                }
+            }
         }
              
     }
