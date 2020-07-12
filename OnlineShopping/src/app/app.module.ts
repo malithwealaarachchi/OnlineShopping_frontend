@@ -7,12 +7,14 @@ import { TopNavigationComponent } from './top-navigation/top-navigation.componen
 import { SignComponent } from './sign/sign.component';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { RegistrationComponent } from './registration/registration.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopNavigationComponent,
-    SignComponent
+    SignComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,

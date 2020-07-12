@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29911.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineShopping.webApplication", "OnlineShopping.webApplication\OnlineShopping.webApplication.csproj", "{53A7DDD3-9DA7-4E8F-8B1D-F81CECC2A9C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineShopping.webApplication", "OnlineShopping.webApplication\OnlineShopping.webApplication.csproj", "{53A7DDD3-9DA7-4E8F-8B1D-F81CECC2A9C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineShopping.Business", "OnlineShopping.Business\OnlineShopping.Business.csproj", "{54FA4203-BB40-4ED1-A686-58E7102254C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineShopping.Business", "OnlineShopping.Business\OnlineShopping.Business.csproj", "{54FA4203-BB40-4ED1-A686-58E7102254C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineShopping.Common", "OnlineShopping.Common\OnlineShopping.Common.csproj", "{B9CB890A-52ED-4287-AD79-6A20A0F085B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineShopping.Common", "OnlineShopping.Common\OnlineShopping.Common.csproj", "{B9CB890A-52ED-4287-AD79-6A20A0F085B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineShopping.Data", "OnlineShopping.Data\OnlineShopping.Data.csproj", "{13226960-DB05-47AB-AFC3-F73AFBEFC51C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{B9CB890A-52ED-4287-AD79-6A20A0F085B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9CB890A-52ED-4287-AD79-6A20A0F085B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B9CB890A-52ED-4287-AD79-6A20A0F085B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13226960-DB05-47AB-AFC3-F73AFBEFC51C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13226960-DB05-47AB-AFC3-F73AFBEFC51C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13226960-DB05-47AB-AFC3-F73AFBEFC51C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13226960-DB05-47AB-AFC3-F73AFBEFC51C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

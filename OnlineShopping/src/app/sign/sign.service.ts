@@ -14,11 +14,12 @@ export class SignService {
   constructor( private _http : HttpClient) { }
 
   enroll(user: User ) : Observable<User> {
-    return this._http.post<User>('https://localhost:44302/api/login', user,{
-     headers: new HttpHeaders({
-       'Content-Type' : 'application/json'
-     })
-    })
+    const headers = new HttpHeaders({'Content-Type':'application/json'});
+    const body ={
+      email : user.email,
+      password : user.password
+    };
+    return this._http.post<User>('https://localhost:44302/api/login/UserEnroll', body,{headers})
   }
 }
   

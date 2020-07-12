@@ -10,7 +10,7 @@ import {User} from './user';
 })
 export class SignComponent implements OnInit {
 
-  public UserModel =new User;
+  public UserModel = new User;
 
   constructor(private signService :SignService )
   {

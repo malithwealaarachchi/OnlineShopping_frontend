@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    ".NETCoreApp,Version=v3.1": {
+      "OnlineShopping.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/OnlineShopping.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/OnlineShopping.Common.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "OnlineShopping.Common/1.0.0": {
+      "type": "project",
+      "path": "../OnlineShopping.Common/OnlineShopping.Common.csproj",
+      "msbuildProject": "../OnlineShopping.Common/OnlineShopping.Common.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
+    ".NETCoreApp,Version=v3.1": [
+      "OnlineShopping.Common >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Administrator\\.nuget\\packages\\": {},
@@ -36,7 +55,11 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "F:\\project\\OnlineShopping_Anguler\\OnlineShopping_frontend\\OnlineShoppingBackEnd\\OnlineShopping.Common\\OnlineShopping.Common.csproj": {
+              "projectPath": "F:\\project\\OnlineShopping_Anguler\\OnlineShopping_frontend\\OnlineShoppingBackEnd\\OnlineShopping.Common\\OnlineShopping.Common.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

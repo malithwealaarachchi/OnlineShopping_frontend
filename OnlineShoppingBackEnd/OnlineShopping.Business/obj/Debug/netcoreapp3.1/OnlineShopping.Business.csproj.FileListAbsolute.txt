@@ -1,0 +1,12 @@
+F:\project\OnlineShopping_Anguler\OnlineShopping_frontend\OnlineShoppingBackEnd\OnlineShopping.Business\bin\Debug\netcoreapp3.1\OnlineShopping.Business.deps.json
+F:\project\OnlineShopping_Anguler\OnlineShopping_frontend\OnlineShoppingBackEnd\OnlineShopping.Business\bin\Debug\netcoreapp3.1\OnlineShopping.Business.dll
+F:\project\OnlineShopping_Anguler\OnlineShopping_frontend\OnlineShoppingBackEnd\OnlineShopping.Business\bin\Debug\netcoreapp3.1\OnlineShopping.Business.pdb
+F:\project\OnlineShopping_Anguler\OnlineShopping_frontend\OnlineShoppingBackEnd\OnlineShopping.Business\bin\Debug\netcoreapp3.1\OnlineShopping.Common.dll
+F:\project\OnlineShopping_Anguler\OnlineShopping_frontend\OnlineShoppingBackEnd\OnlineShopping.Business\bin\Debug\netcoreapp3.1\OnlineShopping.Common.pdb
+F:\project\OnlineShopping_Anguler\OnlineShopping_frontend\OnlineShoppingBackEnd\OnlineShopping.Business\obj\Debug\netcoreapp3.1\OnlineShopping.Business.csprojAssemblyReference.cache
+F:\project\OnlineShopping_Anguler\OnlineShopping_frontend\OnlineShoppingBackEnd\OnlineShopping.Business\obj\Debug\netcoreapp3.1\OnlineShopping.Business.csproj.CoreCompileInputs.cache
+F:\project\OnlineShopping_Anguler\OnlineShopping_frontend\OnlineShoppingBackEnd\OnlineShopping.Business\obj\Debug\netcoreapp3.1\OnlineShopping.Business.AssemblyInfoInputs.cache
+F:\project\OnlineShopping_Anguler\OnlineShopping_frontend\OnlineShoppingBackEnd\OnlineShopping.Business\obj\Debug\netcoreapp3.1\OnlineShopping.Business.AssemblyInfo.cs
+F:\project\OnlineShopping_Anguler\OnlineShopping_frontend\OnlineShoppingBackEnd\OnlineShopping.Business\obj\Debug\netcoreapp3.1\OnlineShopping.Business.csproj.CopyComplete
+F:\project\OnlineShopping_Anguler\OnlineShopping_frontend\OnlineShoppingBackEnd\OnlineShopping.Business\obj\Debug\netcoreapp3.1\OnlineShopping.Business.dll
+F:\project\OnlineShopping_Anguler\OnlineShopping_frontend\OnlineShoppingBackEnd\OnlineShopping.Business\obj\Debug\netcoreapp3.1\OnlineShopping.Business.pdb

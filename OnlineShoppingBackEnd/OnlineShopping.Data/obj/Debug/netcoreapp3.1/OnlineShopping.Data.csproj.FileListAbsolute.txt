@@ -1,0 +1,15 @@
+F:\project\OnlineShopping_Anguler\OnlineShopping_frontend\OnlineShoppingBackEnd\OnlineShopping.Data\bin\Debug\netcoreapp3.1\OnlineShopping.Data.deps.json
+F:\project\OnlineShopping_Anguler\OnlineShopping_frontend\OnlineShoppingBackEnd\OnlineShopping.Data\bin\Debug\netcoreapp3.1\OnlineShopping.Data.runtimeconfig.json
+F:\project\OnlineShopping_Anguler\OnlineShopping_frontend\OnlineShoppingBackEnd\OnlineShopping.Data\bin\Debug\netcoreapp3.1\OnlineShopping.Data.runtimeconfig.dev.json
+F:\project\OnlineShopping_Anguler\OnlineShopping_frontend\OnlineShoppingBackEnd\OnlineShopping.Data\bin\Debug\netcoreapp3.1\OnlineShopping.Data.dll
+F:\project\OnlineShopping_Anguler\OnlineShopping_frontend\OnlineShoppingBackEnd\OnlineShopping.Data\bin\Debug\netcoreapp3.1\OnlineShopping.Data.pdb
+F:\project\OnlineShopping_Anguler\OnlineShopping_frontend\OnlineShoppingBackEnd\OnlineShopping.Data\bin\Debug\netcoreapp3.1\OnlineShopping.Common.dll
+F:\project\OnlineShopping_Anguler\OnlineShopping_frontend\OnlineShoppingBackEnd\OnlineShopping.Data\bin\Debug\netcoreapp3.1\OnlineShopping.Common.pdb
+F:\project\OnlineShopping_Anguler\OnlineShopping_frontend\OnlineShoppingBackEnd\OnlineShopping.Data\obj\Debug\netcoreapp3.1\OnlineShopping.Data.csprojAssemblyReference.cache
+F:\project\OnlineShopping_Anguler\OnlineShopping_frontend\OnlineShoppingBackEnd\OnlineShopping.Data\obj\Debug\netcoreapp3.1\OnlineShopping.Data.csproj.CoreCompileInputs.cache
+F:\project\OnlineShopping_Anguler\OnlineShopping_frontend\OnlineShoppingBackEnd\OnlineShopping.Data\obj\Debug\netcoreapp3.1\OnlineShopping.Data.AssemblyInfoInputs.cache
+F:\project\OnlineShopping_Anguler\OnlineShopping_frontend\OnlineShoppingBackEnd\OnlineShopping.Data\obj\Debug\netcoreapp3.1\OnlineShopping.Data.AssemblyInfo.cs
+F:\project\OnlineShopping_Anguler\OnlineShopping_frontend\OnlineShoppingBackEnd\OnlineShopping.Data\obj\Debug\netcoreapp3.1\OnlineShopping.Data.csproj.CopyComplete
+F:\project\OnlineShopping_Anguler\OnlineShopping_frontend\OnlineShoppingBackEnd\OnlineShopping.Data\obj\Debug\netcoreapp3.1\OnlineShopping.Data.dll
+F:\project\OnlineShopping_Anguler\OnlineShopping_frontend\OnlineShoppingBackEnd\OnlineShopping.Data\obj\Debug\netcoreapp3.1\OnlineShopping.Data.pdb
+F:\project\OnlineShopping_Anguler\OnlineShopping_frontend\OnlineShoppingBackEnd\OnlineShopping.Data\obj\Debug\netcoreapp3.1\OnlineShopping.Data.genruntimeconfig.cache
