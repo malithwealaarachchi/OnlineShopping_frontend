@@ -25,15 +25,15 @@ namespace OnlineShopping.Data
             _signInManager = signInManager;
         }
 
-        public async Task<string> loginUser(User userModel)
+        public async Task<User> loginUser(User userModel)
         {
-            var result = await _signInManager.PasswordSignInAsync(userModel.Email, userModel.Password, false, false);
+            var result = await _signInManager.PasswordSignInAsync(userModel.UserName, userModel.Password, false, false);
             if (result.Succeeded)
             {
-                return "login succeeded";
+                return userModel;
             }
             else
-                return "login unsucceeded";
+                return null;
         }
 
         public async Task<User> UserRegistration(User UserModel)

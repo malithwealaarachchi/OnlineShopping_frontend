@@ -9,7 +9,7 @@ namespace OnlineShopping.Common.BusinessInterfaces
 {
     public interface ILoginBusiness
     {
-        public Task<String> LoginUser(User userModel);
+        public Task<User> LoginUser(User userModel);
         public Task<User> UserRegistration(User userModel);
 
     }

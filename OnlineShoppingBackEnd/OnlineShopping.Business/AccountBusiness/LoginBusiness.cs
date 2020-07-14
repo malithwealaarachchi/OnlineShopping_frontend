@@ -17,7 +17,7 @@ namespace OnlineShopping.Business.AccountBusiness
             _userRepository = userRepository;
         }
 
-        public async Task<string> LoginUser(User userModel)
+        public async Task<User> LoginUser(User userModel)
         {
             return await _userRepository.loginUser(userModel).ConfigureAwait(false);
         }

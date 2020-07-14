@@ -16,7 +16,7 @@ export class SignService {
   enroll(user: User ) : Observable<User> {
     const headers = new HttpHeaders({'Content-Type':'application/json'});
     const body ={
-      email : user.email,
+      username : user.username,
       password : user.password
     };
     return this._http.post<User>('https://localhost:44302/api/login/UserEnroll', body,{headers})

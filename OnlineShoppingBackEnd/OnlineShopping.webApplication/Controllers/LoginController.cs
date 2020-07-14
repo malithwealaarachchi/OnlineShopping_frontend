@@ -21,9 +21,11 @@ namespace OnlineShopping.webApplication.Controllers
         [Route("api/Login")]
         [Route("api/Login/UserEnroll")]
         [HttpPost]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> UserEnroll(User userModel)
         {
-            if (string.IsNullOrEmpty(userModel.Email) || string.IsNullOrEmpty(userModel.Password))
+            if (string.IsNullOrEmpty(userModel.UserName) || string.IsNullOrEmpty(userModel.Password))
             {
                 return BadRequest();
             }
@@ -31,7 +33,7 @@ namespace OnlineShopping.webApplication.Controllers
             {
                 try
                 {
-                    await _loginBusiness.LoginUser(userModel).ConfigureAwait(false);
+                    var result = await _loginBusiness.LoginUser(userModel).ConfigureAwait(false);
                     return Ok();
                 }
                 catch (Exception)
@@ -43,6 +45,8 @@ namespace OnlineShopping.webApplication.Controllers
         }
         [Route("api/Login/UserRegister")]
         [HttpPost]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> UserRegister(User userModel)
         {
             if (string.IsNullOrEmpty(userModel.Email) || string.IsNullOrEmpty(userModel.Password))
@@ -54,7 +58,7 @@ namespace OnlineShopping.webApplication.Controllers
                 try
                 {
                     await _loginBusiness.UserRegistration(userModel);
-                    return Ok();
+                    return Ok(userModel);
                 }
                 catch (Exception)
                 {
