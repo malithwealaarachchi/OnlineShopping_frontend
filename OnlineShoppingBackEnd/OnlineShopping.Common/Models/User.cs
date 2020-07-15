@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OnlineShopping.Common.Models
 {
-    public class User
+    public class User 
     {
         public string Email { get; set; }
         public string Password { get; set; }

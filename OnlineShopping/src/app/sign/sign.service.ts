@@ -8,9 +8,6 @@ import { Observable } from 'rxjs';
 })
 export class SignService {
 
-  private baseUrl = "https://localhost:44302/";
-  private readonly apiPath : string = "api/Login";
-
   constructor( private _http : HttpClient) { }
 
   enroll(user: User ) : Observable<User> {
@@ -19,7 +16,7 @@ export class SignService {
       username : user.username,
       password : user.password
     };
-    return this._http.post<User>('https://localhost:44302/api/login/UserEnroll', body,{headers})
+    return this._http.post<User>('https://localhost:44302/api/login/UserEnroll', body,{headers});
   }
 }
   

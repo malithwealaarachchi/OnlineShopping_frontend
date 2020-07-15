@@ -23,6 +23,8 @@ namespace OnlineShopping.webApplication.Controllers
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        
+
         public async Task<IActionResult> UserEnroll(User userModel)
         {
             if (string.IsNullOrEmpty(userModel.UserName) || string.IsNullOrEmpty(userModel.Password))
@@ -34,7 +36,7 @@ namespace OnlineShopping.webApplication.Controllers
                 try
                 {
                     var result = await _loginBusiness.LoginUser(userModel).ConfigureAwait(false);
-                    return Ok();
+                    return Ok(result);
                 }
                 catch (Exception)
                 {
@@ -49,7 +51,7 @@ namespace OnlineShopping.webApplication.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> UserRegister(User userModel)
         {
-            if (string.IsNullOrEmpty(userModel.Email) || string.IsNullOrEmpty(userModel.Password))
+            if (string.IsNullOrEmpty(userModel.UserName) || string.IsNullOrEmpty(userModel.Password))
             {
                 return BadRequest();
             }

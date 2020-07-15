@@ -1,16 +1,19 @@
 
     <div id="logreg-forms">
         <form class="form-signin" #loginForm="ngForm" (ngSubmit)="onSubmit()">
-            <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Sign in</h1>
+            <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Sign in</h1>   
             <div class="social-login">
                 <button class="btn facebook-btn social-btn" type="button"><span><i class="fab fa-facebook-f"></i> Sign in with Facebook</span> </button>
                 <button class="btn google-btn social-btn" type="button"><span><i class="fab fa-google-plus-g"></i> Sign in with Google+</span> </button>
             </div>
             <p style="text-align:center"> OR  </p>
-            <input type="text" id="inputEmail" class="form-control" placeholder="User Name" required="" autofocus="" name="email" [(ngModel)]="UserModel.username">
-            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="" name="password" [(ngModel)]="UserModel.password">
-            
-            <button class="btn btn-success btn-block" type="submit"><i class="fas fa-sign-in-alt"></i> Sign in</button>
+            <input type="text" required #username="ngModel" [class.is-invalid]="username.invalid && username.touched" id="inputUserName" class="form-control" placeholder="User Name"  name="username" [(ngModel)]="UserModel.username">
+            <small class="text-danger" [class.d-none]="username.valid || username.untouched">Username is required</small>
+            <input type="password" required #password ="ngModel" [class.is-invalid]="password.invalid && password.touched" id="inputPassword" class="form-control" placeholder="Password" required="" name="password" [(ngModel)]="UserModel.password">
+            <small class="text-danger" [class.d-none]="password.valid || password.untouched">password is required</small>
+
+            <button class="btn btn-success btn-block" [disabled]="loginForm.form.invalid" type="submit"><i class="fas fa-sign-in-alt"></i> Sign in</button>
+            <div class="text-danger" *ngIf="!loginDetails">Username or Password incorrect</div>
             <a href="#" id="forgot_pswd">Forgot password?</a>
             <hr>
             <a class="btn btn-primary text-white" routerLink="/registration" routerLinkActive="active">Sign up new Account</a>

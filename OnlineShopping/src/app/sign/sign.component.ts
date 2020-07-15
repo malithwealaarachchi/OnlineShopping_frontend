@@ -11,16 +11,21 @@ import {User} from './user';
 export class SignComponent implements OnInit {
 
   public UserModel = new User;
+  public loginDetails : any;
+
 
   constructor(private signService :SignService )
   {
-
+    
   } 
   
   ngOnInit(): void {
-  
+  this.loginDetails=" ";
   }
   onSubmit(){
-    this.signService.enroll(this.UserModel).subscribe(loginDetails => console.log('Success', loginDetails))
+    this.signService.enroll(this.UserModel).subscribe(loginDetails => {
+      this.loginDetails = loginDetails;
+      console.log(loginDetails);
+    });
   }
 }
