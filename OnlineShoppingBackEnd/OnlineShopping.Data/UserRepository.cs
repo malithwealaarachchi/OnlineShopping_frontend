@@ -4,20 +4,22 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+
 using OnlineShopping.Common.BusinessInterfaces;
 using OnlineShopping.Common.Models;
+using OnlineShopping.Data.Entities;
 
 namespace OnlineShopping.Data
 {
     public class UserRepository : IUserRepository
     {
         private readonly OnlineshoppingContext _dbcontext;
-        private readonly UserManager<IdentityUser> _userManager;
-        private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly SignInManager<ApplicationUser> _signInManager;
 
         public UserRepository(OnlineshoppingContext dbcontext,
-            UserManager<IdentityUser> userManager,
-            SignInManager<IdentityUser> signInManager )
+            UserManager<ApplicationUser> userManager,
+            SignInManager<ApplicationUser> signInManager )
            
         {
             _dbcontext = dbcontext;
@@ -38,7 +40,7 @@ namespace OnlineShopping.Data
 
         public async Task<User> UserRegistration(User UserModel)
         {
-            var user = new IdentityUser { UserName = UserModel.UserName, Email = UserModel.Email , PhoneNumber = UserModel.PhoneNumber };
+            var user = new ApplicationUser { UserName = UserModel.UserName, Email = UserModel.Email , PhoneNumber = UserModel.PhoneNumber };
             var result =  await _userManager.CreateAsync(user, UserModel.Password);
 
             if (result.Succeeded)
@@ -46,7 +48,7 @@ namespace OnlineShopping.Data
                await _signInManager.SignInAsync(user, isPersistent: false);
                 return (UserModel);
             }
-            return null;
+            return null; 
         }
     }
 }

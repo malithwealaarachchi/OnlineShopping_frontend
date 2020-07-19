@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
-using OnlineShopping.Common.Entities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using OnlineShopping.Data.Entities;
 
 namespace OnlineShopping.Data
 {
-    public class OnlineshoppingContext : IdentityDbContext 
+    public class OnlineshoppingContext : IdentityDbContext<ApplicationUser> 
     {
         public OnlineshoppingContext(DbContextOptions<OnlineshoppingContext> options) : base(options)
         {

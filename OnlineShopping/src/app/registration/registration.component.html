@@ -6,52 +6,99 @@
             <div class="input-group-prepend">
                 <span class="input-group-text"> <i class="fa fa-user"></i> </span>
              </div>
-            <input name="username" class="form-control" placeholder="Full name" type="text" [(ngModel)]="UserModel.username">
+            <input name="username" required #UserName ="ngModel"  [class.is-invalid]="UserName.invalid && UserName.touched"  class="form-control" placeholder="User Name" type="text" [(ngModel)]="UserModel.username">
         </div> <!-- form-group// -->
+        <small class="text-danger" [class.d-none]="UserName.valid || UserName.untouched">UserName is required</small>
+
         <div class="form-group input-group">
             <div class="input-group-prepend">
                 <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
              </div>
-            <input name="email" class="form-control" placeholder="Email address" type="email" [(ngModel)]="UserModel.email">
+            <input name="email" required #email="ngModel" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" [class.is-invalid]="email.invalid && email.touched" class="form-control" placeholder="Email address" type="email" [(ngModel)]="UserModel.email">
         </div> <!-- form-group// -->
+        <div *ngIf="email.errors && (email.dirty || email.touched)" class="text-danger">
+            <small [hidden]="!email.errors.required">
+              Email is required
+            </small>
+            <small [hidden]="!email.errors.pattern">
+              Email format incorrect
+            </small>
+        </div>
+
         <div class="form-group input-group">
             <div class="input-group-prepend">
                 <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
             </div>
-            <input name="phonenumber" class="form-control" placeholder="Phone number" type="text" [(ngModel)]="UserModel.phonenumber">
+            <input name="phonenumber" required  #mobileRef="ngModel" pattern="[0-9]*" maxlength="10" minlength="10" [class.is-invalid]="mobileRef.invalid && mobileRef.touched" class="form-control" placeholder="Phone number" type="text" [(ngModel)]="UserModel.phonenumber">
         </div> <!-- form-group// -->
+        <div *ngIf="mobileRef.errors && (mobileRef.dirty || mobileRef.touched)" class="text-danger">
+            <small [hidden]="!mobileRef.errors.pattern">
+              Mobile numberr should be only numbers
+            </small>
+            <small [hidden]="!mobileRef.errors.maxlength">
+              Please Enter Atleast 10 Digit Number 
+            </small>
+            <small [hidden]="!mobileRef.errors.minlength">
+              Please Enter Atleast 10 Digit Number 
+            </small>
+            <small [hidden]="!mobileRef.errors.required">
+              Mobile is required 
+            </small>
+          </div>
         <div class="form-group input-group">
             <div class="input-group-prepend">
                 <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
             </div>
-            <input name="streetnumberandname" class="form-control" placeholder="Street number and Name" type="text" [(ngModel)]="UserModel.streetnumberandname">
+            <input name="streetnumberandname"  required #streetnumberandname="ngModel" [class.is-invalid]="streetnumberandname.invalid && streetnumberandname.touched" class="form-control" placeholder="Street number and Name" type="text" [(ngModel)]="UserModel.streetnumberandname">
         </div> <!-- form-group// -->
+        <small class="text-danger" [class.d-none]="streetnumberandname.valid || streetnumberandname.untouched">Street number and Name</small>
+
         <div class="form-group input-group">
             <div class="input-group-prepend">
                 <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
             </div>
-            <input name="nameoftown" class="form-control" placeholder="Name of town" type="text" [(ngModel)]="UserModel.nameoftown">
+            <input name="nameoftown" required #nameoftown="ngModel" [class.is-invalid]="nameoftown.invalid && nameoftown.touched" class="form-control" placeholder="Name of town" type="text" [(ngModel)]="UserModel.nameoftown">
         </div> <!-- form-group// -->
+        <small class="text-danger" [class.d-none]="nameoftown.valid || nameoftown.untouched">Name of town required</small>
+
         <div class="form-group input-group">
             <div class="input-group-prepend">
                 <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
             </div>
-            <input name="postcode" class="form-control" placeholder="Postcode" type="text" [(ngModel)]="UserModel.postcode">
+            <input name="postcode" required #postcode="ngModel" pattern="[0-9]*" maxlength="5" minlength="5" [class.is-invalid]="postcode.invalid && postcode.touched" class="form-control" placeholder="Postcode" type="text" [(ngModel)]="UserModel.postcode">
         </div> <!-- form-group// -->
+        <div *ngIf="postcode.errors && (postcode.dirty || postcode.touched)" class="text-danger">
+            <small [hidden]="!postcode.errors.pattern">
+                Postcode numberr should be only numbers
+            </small>
+            <small [hidden]="!postcode.errors.maxlength">
+                Postcode should be 5 Digit Number Only
+            </small>
+            <small [hidden]="!postcode.errors.minlength">
+                Postcode Enter Atleast 5 Digit Number 
+            </small>
+            <small [hidden]="!postcode.errors.required">
+                Postcode is required 
+            </small>
+          </div>
         <div class="form-group input-group">
             <div class="input-group-prepend">
                 <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
             </div>
-            <input class="form-control" placeholder="Create password" type="password">
+            <input name="passwordOntime" required #passwordOntime ="ngModel" class="form-control"   placeholder="Create password" type="password" [ngModel]>
         </div> <!-- form-group// -->
+
         <div class="form-group input-group">
             <div class="input-group-prepend">
                 <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
             </div>
-            <input class="form-control" placeholder="Repeat password" type="password" name="password" [(ngModel)]="UserModel.password">
-        </div> <!-- form-group// -->                                      
+            <input class="form-control" required #password="ngModel" [class.is-invalid]="password.invalid && password.touched" placeholder="Repeat password" type="password" name="password" [(ngModel)]="UserModel.password">
+        </div> <!-- form-group// --> 
+        <small class="text-danger" [class.d-none]="password.valid || password.untouched">Password required</small>
+        <small class="text-danger"*ngIf="(passwordOntime.value!=password.value) && password.dirty" >Password not match</small>
+                                     
         <div class="form-group">
-            <button type="submit" class="btn btn-primary btn-block"> Create Account  </button>
+            <button type="submit" [disabled]="registration.form.invalid || passwordOntime.value!=password.value" class="btn btn-primary btn-block"> Create Account  </button>
         </div> <!-- form-group// -->      
         <p class="text-center">Have an account? <a href=""  routerLink="/sign" routerLinkActive="active">Log In</a> </p>                                                                 
     </form>

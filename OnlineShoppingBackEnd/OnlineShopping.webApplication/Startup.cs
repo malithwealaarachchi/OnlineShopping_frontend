@@ -14,6 +14,7 @@ using Microsoft.CodeAnalysis.Options;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.Identity;
+using OnlineShopping.Data.Entities;
 
 namespace OnlineShopping.webApplication
 {
@@ -46,7 +47,7 @@ namespace OnlineShopping.webApplication
             services.AddControllers();
                  
             services.AddDbContextPool<OnlineshoppingContext>(Options => Options.UseSqlServer(_config.GetConnectionString("OnlineShoppingDBConnection")));
-            services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<OnlineshoppingContext>();
+            services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<OnlineshoppingContext>();
             services.AddScoped<ILoginBusiness, LoginBusiness>();
             services.AddScoped<IUserRepository, UserRepository>();
         }           
