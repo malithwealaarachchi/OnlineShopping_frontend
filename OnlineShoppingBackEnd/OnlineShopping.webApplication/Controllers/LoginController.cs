@@ -17,8 +17,7 @@ namespace OnlineShopping.webApplication.Controllers
         {
             _loginBusiness = loginBusiness;
         }
-        [Route("")]
-        [Route("api/Login")]
+        
         [Route("api/Login/UserEnroll")]
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status200OK)]
@@ -43,10 +42,9 @@ namespace OnlineShopping.webApplication.Controllers
                     return StatusCode(500, "Internal server error");
                 }
             }
-
         }
         [Route("api/Login/UserRegister")]
-        [HttpPost]
+        [HttpPost] 
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> UserRegister(User userModel)
@@ -59,8 +57,8 @@ namespace OnlineShopping.webApplication.Controllers
             {
                 try
                 {
-                    await _loginBusiness.UserRegistration(userModel);
-                    return Ok(userModel);
+                    var result =  await _loginBusiness.UserRegistration(userModel);
+                    return Ok(result);
                 }
                 catch (Exception)
                 {

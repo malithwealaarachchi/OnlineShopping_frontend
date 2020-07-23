@@ -4,7 +4,6 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-
 using OnlineShopping.Common.BusinessInterfaces;
 using OnlineShopping.Common.Models;
 using OnlineShopping.Data.Entities;
@@ -32,7 +31,17 @@ namespace OnlineShopping.Data
             var result = await _signInManager.PasswordSignInAsync(userModel.UserName, userModel.Password, false, false);
             if (result.Succeeded)
             {
-                return userModel;
+                try
+                {
+                    var newuser = new User { UserName = userModel.UserName };
+                    return newuser;
+                }
+                catch(System.Exception ex)
+                {
+                    System.Exception newex = new System.Exception("exception on data layer",ex);
+                    throw newex;
+                }
+               
             }
             else
                 return null;
@@ -45,8 +54,8 @@ namespace OnlineShopping.Data
 
             if (result.Succeeded)
             {
-               await _signInManager.SignInAsync(user, isPersistent: false);
-                return (UserModel);
+                await _signInManager.SignInAsync(user, isPersistent: false);
+                return (new User { UserName = UserModel.UserName });
             }
             return null; 
         }
