@@ -8,13 +8,17 @@ import { SignComponent } from './sign/sign.component';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { RegistrationComponent } from './registration/registration.component';
+import { ProductsComponent } from './products/products.component';
+import { ProductComponent } from './product/product.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopNavigationComponent,
     SignComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    ProductsComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
