@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using OnlineShopping.Common.BusinessInterfaces;
+using OnlineShopping.Common.Interfaces;
 using OnlineShopping.Business.AccountBusiness;
 using OnlineShopping.Data;
 using Microsoft.CodeAnalysis.Options;
@@ -15,6 +15,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.AspNetCore.Identity;
 using OnlineShopping.Data.Entities;
+using OnlineShopping.Common.BusinessInterfaces;
+using OnlineShopping.Business.ProductBusiness;
 
 namespace OnlineShopping.webApplication
 {
@@ -32,24 +34,29 @@ namespace OnlineShopping.webApplication
         }
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddCors(options =>
-            {
-                options.AddPolicy(MyAllowSpecificOrigins,
-                                  builder =>
-                                  {
-                                      builder.WithOrigins("http://localhost:44302",
-                                                          "http://localhost:4200")
-                                                          .AllowAnyHeader()
-                                                          .AllowAnyMethod();
-                                  });
-            });
+             services.AddCors(options =>
+             {
+                 options.AddPolicy(MyAllowSpecificOrigins,
+                                   builder =>
+                                   {
+                                       builder.WithOrigins("http://localhost:44302",
+                                                           "http://localhost:4200")
+                                                           .AllowAnyHeader()
+                                                           .AllowAnyMethod();
+                                   });
+             });
 
+            //ConfigureDatabase(services);
             services.AddControllers();
                  
             services.AddDbContextPool<OnlineshoppingContext>(Options => Options.UseSqlServer(_config.GetConnectionString("OnlineShoppingDBConnection")));
             services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<OnlineshoppingContext>();
+
+           
             services.AddScoped<ILoginBusiness, LoginBusiness>();
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IProductsBusiness, ProductsBusiness>();
+            services.AddScoped<IProductRepository, ProductRepository>();
         }           
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -69,5 +76,23 @@ namespace OnlineShopping.webApplication
                 endpoints.MapControllers();
             });
         }
+       // protected virtual void ConfigureDatabase(IServiceCollection services)
+       // {
+            //if (_currentEnvironment.IsEnvironment("Test"))
+            //{
+            //    return;
+            //}
+
+            //if (_currentEnvironment.IsDevelopment() && Configuration.GetValue<bool>("UseInMemoryDataBase"))
+            //{
+            //    services.AddDbContext<ChallengesContext>(c => c.UseInMemoryDatabase("Vinnovate"));
+            //}
+            //else
+            
+                //services.AddDbContext<OnlineshoppingContext>(c =>
+
+                //c.UseSqlServer(_config.GetConnectionString("OnlineShoppingDBConnection")));
+            
+        //}
     }
 }

@@ -16,6 +16,8 @@ export class RegistrationComponent implements OnInit {
   }
 
   onSubmit(){
-    this._registrationService.UserRegister(this.UserModel).subscribe(Reg => console.log('Success',Reg));
+    this._registrationService.UserRegister(this.UserModel).subscribe(Reg =>{
+      console.log('Success',Reg)
+    } );
   }
 }
